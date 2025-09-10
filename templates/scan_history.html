@@ -1,0 +1,9 @@
+<!doctype html>
+<title>History</title>
+<h1>Scan History</h1>
+<ul>
+  {% for s in scans %}
+    <li><a href="/scan/{{ s[0] }}">Scan {{ s[0] }}</a> - {{ s[1] }} - {{ s[2] }}</li>
+  {% endfor %}
+</ul>
+<p><a href="/">Back</a></p>

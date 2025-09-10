@@ -1,0 +1,21 @@
+<!doctype html>
+<title>Scan {{ scan_id }}</title>
+<h1>Scan Results for {{ scan[0] if scan }}</h1>
+<p>Started at: {{ scan[1] if scan }}</p>
+{% if findings %}
+  <table border="1" cellpadding="6">
+    <tr><th>URL</th><th>Param</th><th>Vuln</th><th>Severity</th><th>Evidence</th></tr>
+    {% for f in findings %}
+      <tr>
+        <td>{{ f[0] }}</td>
+        <td>{{ f[1] }}</td>
+        <td>{{ f[2] }}</td>
+        <td>{{ f[4] }}</td>
+        <td><pre>{{ f[3] }}</pre></td>
+      </tr>
+    {% endfor %}
+  </table>
+{% else %}
+  <p>No findings.</p>
+{% endif %}
+<p><a href="/">Back</a> | <a href="/history">History</a></p>
