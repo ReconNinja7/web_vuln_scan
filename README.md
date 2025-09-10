@@ -72,6 +72,3 @@ A detailed **2-page PDF report** is included:
 
 ```
  
-
-Do you also want me to give you the **.gitignore content** in the same way (so you can copy–paste that too)?
-```
